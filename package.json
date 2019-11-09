@@ -1,0 +1,19 @@
+{
+  "name": "project0",
+  "version": "1.0.0",
+  "description": "Project Web50 - Harold Benito Espinoza Trujillo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "./node_modules/sass/sass.js --watch ./scss/main.scss ./css/style.css",
+    "server": "browser-sync start -s -f . --no-notify --no-open --port 9000",
+    "start": "concurrently -n sass,server \"npm run sass\" \"npm run server\""
+  },
+  "author": "Harold Espinoza",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.0.0",
+    "sass": "^1.23.3"
+  }
+}
