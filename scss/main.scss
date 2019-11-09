@@ -1,0 +1,37 @@
+@import "variables", "resets", "utils";
+
+body{
+  font-family: $font-family;
+  font-size: $font-size;
+  min-height: 100vh;
+  background-color: $body-color;
+}
+
+@import "flex";
+
+#main-header{
+  @extend .flex-row;
+  @extend .flex-justify-space-between;
+  background-color: $secondary;
+  position: fixed;
+  margin: .5rem .75rem;
+  width: calc(100% - 1.5rem);
+  @extend .border-radius;
+}
+.navbar{
+  @extend .flex-row;
+}
+
+.navbar-item{
+  margin-right: .15rem;
+  padding: .5rem 1rem;
+  line-height: 1.15;
+}
+
+.social-navbar{
+  @extend .flex-row;
+  @extend .flex-align-center;
+}
+.social-navbar__item{
+  margin-right: 1rem;
+}

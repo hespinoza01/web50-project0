@@ -1,0 +1,21 @@
+%flex{
+  display: flex;
+}
+
+.flex-row{
+  @extend %flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  @extend %flex;
+  flex-direction: column;
+}
+
+.flex-justify-space-between{
+  justify-content: space-between;
+}
+
+.flex-align-center{
+  align-items: center;
+}
