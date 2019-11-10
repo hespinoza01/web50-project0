@@ -17,6 +17,7 @@ body{
   margin: .5rem .75rem;
   width: calc(100% - 1.5rem);
   @extend .border-radius;
+  @extend .box-shadow;
 }
 .navbar{
   @extend .flex-row;
@@ -26,6 +27,14 @@ body{
   margin-right: .15rem;
   padding: .5rem 1rem;
   line-height: 1.15;
+  @extend .border-radius;
+  &.active{
+    background-color: $primary;
+    color: $secondary;
+  }
+  :hover:not(.active){
+    color: darken($primary, 20%);
+  }
 }
 
 .social-navbar{
@@ -34,4 +43,45 @@ body{
 }
 .social-navbar__item{
   margin-right: 1rem;
+  font-size: 1.15rem;
+  transform: rotateY(0deg);
+  transition: transform .3s;
+  &:last-child{
+    margin-right: 2rem;
+  }
+  &:hover:not(.logo){
+    transform: rotateY(180deg);
+  }
+  &.logo{
+    height: 2.5rem;
+  }
+}
+
+/* banner styles */
+.banner{
+  height: 100vh;
+  @extend .flex-row;
+  @extend .flex-align-center;
+  @extend .flex-justify-space-between;
+  .banner-text{
+    padding-left: 2.5rem;
+    width: 45%;
+    color: $text;
+
+    p{
+      display: inline-block;
+      margin-right: 1rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .banner-text__principal{
+      font-size: 3.5rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+  .banner-img{
+    width: 45%;
+  }
 }

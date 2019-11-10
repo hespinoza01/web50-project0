@@ -11,7 +11,7 @@ a:hover {
   text-decoration: none;
 }
 
-.border-radius, #main-header {
+.border-radius, .navbar-item, #main-header {
   border-radius: 7px;
 }
 
@@ -19,18 +19,22 @@ a:hover {
   border-radius: 100px;
 }
 
+.box-shadow, #main-header {
+  box-shadow: 1px 1px 20px -3px gainsboro;
+}
+
 body {
   font-family: GoogleSans;
   font-size: 16px;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
-.flex-column, .flex-row, .social-navbar, .navbar, #main-header {
+.flex-column, .flex-row, .banner, .social-navbar, .navbar, #main-header {
   display: flex;
 }
 
-.flex-row, .social-navbar, .navbar, #main-header {
+.flex-row, .banner, .social-navbar, .navbar, #main-header {
   flex-direction: row;
 }
 
@@ -38,11 +42,11 @@ body {
   flex-direction: column;
 }
 
-.flex-justify-space-between, #main-header {
+.flex-justify-space-between, .banner, #main-header {
   justify-content: space-between;
 }
 
-.flex-align-center, .social-navbar {
+.flex-align-center, .banner, .social-navbar {
   align-items: center;
 }
 
@@ -58,9 +62,52 @@ body {
   padding: 0.5rem 1rem;
   line-height: 1.15;
 }
+.navbar-item.active {
+  background-color: #4169E1;
+  color: #fff;
+}
+.navbar-item :hover:not(.active) {
+  color: #1a3ca2;
+}
 
 .social-navbar__item {
   margin-right: 1rem;
+  font-size: 1.15rem;
+  transform: rotateY(0deg);
+  transition: transform 0.3s;
+}
+.social-navbar__item:last-child {
+  margin-right: 2rem;
+}
+.social-navbar__item:hover:not(.logo) {
+  transform: rotateY(180deg);
+}
+.social-navbar__item.logo {
+  height: 2.5rem;
+}
+
+/* banner styles */
+.banner {
+  height: 100vh;
+}
+.banner .banner-text {
+  padding-left: 2.5rem;
+  width: 45%;
+  color: #333;
+}
+.banner .banner-text p {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.banner .banner-text .banner-text__principal {
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.banner .banner-img {
+  width: 45%;
 }
 
 /*# sourceMappingURL=style.css.map */
