@@ -55,6 +55,7 @@ body {
   position: fixed;
   margin: 0.5rem 0.75rem;
   width: calc(100% - 1.5rem);
+  z-index: 100;
 }
 
 .navbar-item {
@@ -65,6 +66,7 @@ body {
 .navbar-item.active {
   background-color: #4169E1;
   color: #fff;
+  font-weight: bold;
 }
 .navbar-item :hover:not(.active) {
   color: #1a3ca2;
@@ -92,7 +94,7 @@ body {
 }
 .banner .banner-text {
   padding-left: 2.5rem;
-  width: 45%;
+  width: 50%;
   color: #333;
 }
 .banner .banner-text p {
@@ -101,13 +103,86 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
 }
+.banner .banner-text p:not(.banner-text__principal) {
+  will-change: transform;
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  animation: showingItem 1s forwards;
+}
+.banner .banner-text p:nth-child(3) {
+  animation-delay: 1.15s;
+}
+.banner .banner-text p:nth-child(4) {
+  animation-delay: 2.3s;
+}
 .banner .banner-text .banner-text__principal {
   font-size: 3.5rem;
   font-weight: 400;
   font-style: italic;
 }
 .banner .banner-img {
-  width: 45%;
+  width: 50%;
+}
+
+@keyframes showingItem {
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* FAQ & Form */
+.contactform-area {
+  text-align: center;
+}
+.contactform-area h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+.contactform-area .main_btn {
+  padding: 0.5rem 1rem;
+  background-color: #4169E1;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.accordion {
+  border-radius: 7px;
+}
+.accordion .card * {
+  background-color: #fff;
+}
+.accordion .card-body {
+  background-color: #f7f7f7;
+}
+
+.form-group {
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  border: 1px solid gainsboro;
+  outline: none;
+}
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #4169E1;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f2f2f2;
 }
 
 /*# sourceMappingURL=style.css.map */

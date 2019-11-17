@@ -23,10 +23,10 @@
 <body>
   <header id="main-header">
     <nav class="navbar">
-      <a class="navbar-item active" href="/">Inicio</a>
-      <a class="navbar-item" href="/">Inicio</a>
-      <a class="navbar-item" href="/">Inicio</a>
-      <a class="navbar-item" href="/">Inicio</a>
+      <a class="navbar-item active" href="./index.html">Inicio</a>
+      <a class="navbar-item" href="./informacion.html">Información</a>
+      <a class="navbar-item" href="./proyectos.html">Proyectos</a>
+      <a class="navbar-item" href="./blog.html">Blog</a>
     </nav>
 
     <div class="social-navbar">
@@ -34,7 +34,7 @@
       <a class="social-navbar__item fa fa-github" href="https://github.com/hespinoza01" target="_blank" title="Ver perfil de github" aria-hidden="true"></a>
       <a class="social-navbar__item fa fa-twitter" href="https://twitter.com/hespinoza__" target="_blank" title="Ver perfil de twitter" aria-hidden="true"></a>
       <a class="social-navbar__item fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=50581966620" target="_blank" title="Enviar mensaje" aria-hidden="true"></a>
-      <img class="social-navbar__item logo" src="./img/logo.svg" alt="logo">
+      <img class="social-navbar__item logo" src="./img/logo.svg" alt="logo" title="Harold Espinoza">
     </div>
   </header>
 
@@ -48,6 +48,99 @@
     </div>
     <img class="banner-img" src="./img/banner.png" alt="Imagen banner">
   </section>
+
+
+  <!-- contact form -->
+  <section class="contactform-area">
+    <div class="container">
+
+      <div class="appointment-inner">
+        <div class="row">
+          <div class="col-sm-12 col-lg-5 offset-lg-1">
+            <h3>¿Tienes alguna pregunta?</h3>
+            <div class="accordion" id="accordionExample">
+
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      ¿Ofrecen una solución estándar o un desarrollo a medida para mí?
+                    </button>
+
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Ofrecemos soluciones acordes a sus necesidades, estas van desde una serie de sitios web prediseñados o bien, si lo requiere,un diseño completamente desde cero para usted.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      ¿Cuento con el presupuesto que necesito?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Podemos ayudarle a laborar una opción que pueda ajustarse a su presupuesto. Acompañandole a establece las prioridades de su empresa para que logre realizar la inversión correcta.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      ¿Tengo claros los objetivos y requisitos del ‘sitio’ que deseo?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Si cuenta o no con los objetivos y requisitos de su sitio, no hay problema. Le brindamos un acompañamiento especializado para establecerlos en conjunto con usted.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="col-lg-5">
+            <div class="appointment-form">
+              <h3>¿Tienes dudas o consultas? Escríbeme.</h3>
+              <form action="#">
+                <div class="form-group">
+                  <label>Nombre Completo</label>
+                  <input type="text" placeholder="Su nombre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Su nombre'" required>
+                </div>
+                <div class="form-group">
+                  <label>Correo</label>
+                  <input type="email" placeholder="Su correo" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Su correo'" required>
+                </div>
+                <div class="form-group">
+                  <label>Mensaje</label>
+                  <textarea name="message" cols="20" rows="7"  placeholder="Mensaje" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje'" required></textarea>
+                </div>
+                <a href="#" class="main_btn">Enviar Consulta</a>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <footer>
+    © 2019 Harold Espinoza. Todos los derechos reservados.
+  </footer>
 
   <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap/bootstrap.js"></script>
