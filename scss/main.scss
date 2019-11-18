@@ -166,3 +166,82 @@ footer{
   text-align: center;
   background-color: darken($secondary, 5);
 }
+
+
+.main-content{
+  padding: 5rem 3rem 0 3rem;
+}
+
+.main-content__header{
+  @extend %flex;
+  @extend .flex-row;
+  @extend .flex-justify-space-between;
+  @extend .flex-align-center;
+
+  div{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: -.5rem;
+      display: block;
+      background-color: gainsboro;
+      height: .25rem;
+      width: 65%;
+
+      @keyframes scaleAnimationStart {
+        from{
+          transform: scale3d(0, 1, 1);
+        }
+      }
+      animation: scaleAnimationStart 1s cubic-bezier(.64,.07,.65,1.5);
+      transform-origin: left center;
+    }
+  }
+
+  h1{
+    font-style: italic;
+  }
+
+  h3{
+    font-weight: bold;
+  }
+
+  img{
+    width: 10rem;
+    border-radius: $border-radius-round;
+  }
+}
+
+.information-info{
+  font-size: 1rem;
+  list-style: none;
+  padding: 1rem 0;
+
+  li{
+    padding: .2rem;
+    i{
+      color: $primary;
+      width: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+
+.information__card{
+  border: 1px solid gainsboro;
+  border-radius: $border-radius;
+  padding: 0;
+
+  .information__card-title{
+    display: block;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid gainsboro;
+    font-weight: bold;
+    i{
+      margin-right: 1rem;
+    }
+  }
+}
