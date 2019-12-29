@@ -15,7 +15,7 @@ a:hover {
   border-radius: 7px;
 }
 
-.border-radius-round {
+.border-radius-round, .information__subcard .information__subcard-itemslist li {
   border-radius: 100px;
 }
 
@@ -234,6 +234,12 @@ footer {
   font-size: 1.1rem;
 }
 
+.information-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 1rem;
+}
+
 .information__card {
   border: 1px solid gainsboro;
   border-radius: 7px;
@@ -247,6 +253,54 @@ footer {
 }
 .information__card .information__card-title i {
   margin-right: 1rem;
+}
+.information__card p {
+  padding: 1rem;
+}
+
+.information__subcard {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px dashed gainsboro;
+}
+.information__subcard:last-child {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+.information__subcard .information__subcard-subtitle {
+  font-weight: bold;
+  color: #4169E1;
+  padding: 0.25rem 1rem;
+}
+.information__subcard .no-color-primary {
+  color: #333;
+}
+.information__subcard .information__subcard-itemslist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.information__subcard .information__subcard-itemslist li {
+  background-color: #4169E1;
+  color: #fff;
+  padding: 0.05rem 0.5rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.information__subcard ul {
+  padding-left: 2rem;
+}
+
+.lat-information .information__card {
+  margin-bottom: 1rem;
+}
+.lat-information .information__subcard {
+  margin-bottom: 0;
+}
+
+.no-border {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
