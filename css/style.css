@@ -11,7 +11,7 @@ a:hover {
   text-decoration: none;
 }
 
-.border-radius, .navbar-item, #main-header {
+.border-radius, .table-posts, .navbar-item, #main-header {
   border-radius: 7px;
 }
 
@@ -342,8 +342,31 @@ footer {
   overflow-y: auto;
 }
 
+.table-posts {
+  margin: 2rem auto 0 auto;
+  border: 1px solid gainsboro;
+  overflow: hidden;
+}
+.table-posts table {
+  width: 100%;
+}
+.table-posts thead {
+  text-align: center;
+  background-color: gainsboro;
+}
+.table-posts td, .table-posts th {
+  padding: 0.5rem 1rem;
+}
+.table-posts tbody tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
 .no-border {
   border: none;
+}
+
+.min-height-100vh {
+  min-height: calc(100vh - 7.5rem);
 }
 
 /*# sourceMappingURL=style.css.map */
