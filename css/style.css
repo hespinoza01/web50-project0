@@ -254,6 +254,26 @@ footer {
 .information__card .information__card-title i {
   margin-right: 1rem;
 }
+.information__card .information__card-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4169E1;
+  color: #fff;
+  border-radius: 7px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  box-shadow: 1px 1px 20px -3px transparent;
+  transform: scale(1);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.information__card .information__card-link:hover {
+  box-shadow: 0 0 20px -2px rgba(65, 105, 225, 0.75);
+}
+.information__card .information__card-link:active {
+  transform: scale(0.95);
+}
 .information__card p {
   padding: 1rem;
 }
@@ -297,6 +317,29 @@ footer {
 }
 .lat-information .information__subcard {
   margin-bottom: 0;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+.projects-container .information__card {
+  position: relative;
+}
+.projects-container .information__card .information__card-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.projects-container p {
+  max-height: 170px;
+  overflow-y: hidden;
+}
+.projects-container p:hover {
+  overflow-y: auto;
 }
 
 .no-border {
