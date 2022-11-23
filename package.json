@@ -12,7 +12,7 @@
   "author": "Harold Espinoza",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "concurrently": "^5.0.0",
     "sass": "^1.23.3"
   }
